@@ -1,0 +1,157 @@
+# --- Secrets & environment (keep examples, ignore real) ---
+.env
+.env.*
+
+# --- Logs & diagnostics ---
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+coverage/
+.report/
+reports/
+*.pid
+*.seed
+*.pid.lock
+
+# --- Node / JS / TS toolchains ---
+node_modules/
+dist/
+build/
+.out/
+.next/
+.nuxt/
+.svelte-kit/
+.turbo/
+.vite/
+.parcel-cache/
+.cache/
+.esbuild/
+storybook-static/
+jspm_packages/
+web_modules/
+
+# --- Package manager cruft ---
+.pnpm-store/
+.npm/
+.yarn/*
+!.yarn/patches
+!.yarn/plugins
+!.yarn/releases
+!.yarn/sdks
+!.yarn/versions
+
+# --- TypeScript / linters ---
+*.tsbuildinfo
+.mtscache/
+.eslintcache
+.stylelintcache
+
+# --- Python ---
+__pycache__/
+*.py[cod]
+*.pyc
+*.pyo
+*.pyd
+*.pkl
+.python-version
+.venv/
+venv/
+env/
+pip-wheel-metadata/
+.pytest_cache/
+.mypy_cache/
+.pyre/
+.pytype/
+.ipynb_checkpoints/
+
+# --- Data & temp (keep raw samples separate if needed) ---
+tmp/
+temp/
+.cache_dir/
+data/**/raw/*
+!data/README.md
+
+# --- AI/ML large artifacts (don’t version big binaries) ---
+*.pt
+*.pth
+*.ckpt
+*.onnx
+*.pb
+*.h5
+*.tflite
+*.joblib
+*.npz
+wandb/
+mlruns/
+
+# --- Frontend frameworks (React Native / Expo / Next) ---
+.expo/
+.expo-shared/
+expo-build/
+android/app/build/
+android/.gradle/
+android/.idea/
+android/local.properties
+ios/Pods/
+ios/build/
+ios/DerivedData/
+
+# --- Flutter (if anyone goes mobile) ---
+.flutter-plugins
+.flutter-plugins-dependencies
+.packages
+.pub-cache/
+.pub/
+build/
+
+# --- Java/Gradle (Android tooling) ---
+.gradle/
+build/
+**/build/
+!gradle/wrapper/gradle-wrapper.jar
+*.iml
+
+# --- Xcode (iOS tooling) ---
+*.xcworkspace/
+*.xcuserdatad/
+*.xcuserdata/
+DerivedData/
+
+# --- Docker ---
+docker-data/
+*.tar
+# If you keep an env specifically for docker, uncomment:
+#.env.docker
+
+# --- Images & binaries (generated only; keep source assets!) ---
+*.iso
+*.dmg
+*.zip
+*.7z
+*.tar.gz
+
+# --- OS junk ---
+.DS_Store
+Thumbs.db
+ehthumbs.db
+Icon?
+.Spotlight-V100
+.Trashes
+
+# --- Editors / IDEs ---
+.vscode/*
+!.vscode/extensions.json
+!.vscode/settings.example.json
+.idea/
+*.swp
+*.swo
+
+# --- Misc build stamps ---
+*.orig
+*.rej
+*.bak
+*.tmp
+*.temp
