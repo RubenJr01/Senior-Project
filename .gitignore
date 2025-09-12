@@ -155,3 +155,8 @@ Icon?
 *.bak
 *.tmp
 *.temp
+
+# --- Local dev databases ---
+.db
+.sqlite
+.sqlite3
