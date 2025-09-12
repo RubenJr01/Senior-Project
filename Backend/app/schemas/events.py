@@ -1,15 +1,16 @@
-from pydantic import BaseModel, field_validator
+from pydantic import BaseModel, model_validator
 from datetime import datetime
 
 class EventCreate(BaseModel):
-  title: str; startAt: datetime; endAt: datetime
-  @field_validator("endAt")
-  @classmethod
-  
-  def end_after_start(cls, v, values):
-    if "startAt" in values and v <= values["startAt"]:
+  title: str
+  startAt: datetime
+  endAt: datetime
+
+  @model_validator(mode="after")
+  def check_dates(self):
+    if self.endAt <= self.startAt:
       raise ValueError("endAt must be after startAt")
-    return v
+    return self
   
 class EventOut(BaseModel):
   id: int; title: str; startAt: datetime; endAt: datetime

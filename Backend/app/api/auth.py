@@ -1,9 +1,9 @@
 from fastapi import APIRouter, Depends, HTTPException
 from sqlalchemy.orm import Session
-from app.schemas.auth import RegisterIn, LoginIn, TokenOut
-from app.core.security import hash_password, verify_password, create_access_token
-from app.core.deps import get_db
-from app.db import models
+from ..schemas.auth import RegisterIn, LoginIn, TokenOut
+from ..core.security import hash_password, verify_password, create_access_token
+from ..core.deps import get_db
+from ..db import models
 router = APIRouter()
 
 @router.post("/register", status_code=201)

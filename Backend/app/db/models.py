@@ -1,6 +1,6 @@
 from sqlalchemy import Column, Integer, String, DateTime, ForeignKey
 from sqlalchemy.orm import relationship
-from app.db.session import Base
+from .session import Base
 
 class User(Base):
   __tablename__ = "users"
@@ -16,5 +16,5 @@ class Event(Base):
   title = Column(String, nullable=False)
   start_at = Column(DateTime, nullable=False)
   end_at = Column(DateTime, nullable=False)
-  owner_id = Column(Integer, ForeignKey("user.id"), nullable=False, index=True)
+  owner_id = Column(Integer, ForeignKey("users.id"), nullable=False, index=True)
   owner = relationship("User", back_populates="events")

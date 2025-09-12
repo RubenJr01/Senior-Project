@@ -1,8 +1,8 @@
 from fastapi import APIRouter, Depends, HTTPException
 from sqlalchemy.orm import Session
-from app.core.deps import get_db, get_current_user
-from app.schemas.events import EventCreate, EventOut, EventPage
-from app.db import models
+from ..core.deps import get_db, get_current_user
+from ..schemas.events import EventCreate, EventOut, EventPage
+from ..db import models
 router = APIRouter()
 
 @router.get("", response_model=EventPage)
